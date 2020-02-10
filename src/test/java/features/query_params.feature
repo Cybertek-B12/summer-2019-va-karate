@@ -33,8 +33,6 @@ Feature: query params test with omdb
     * match response.Year != '1991'
     * match response !contains {"Year": '1991'}
 
-
-  @run
   Scenario: create a user and then get it by id
     * def user =
     """
