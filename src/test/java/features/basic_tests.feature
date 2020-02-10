@@ -25,7 +25,7 @@ Feature: Basic zippo tests
     * print "hello" + name
     * print 1 + 1
 
-  @run
+#  @run
   Scenario: verify response
     Given url 'http://api.zippopotam.us/us/22031'
     When method get
