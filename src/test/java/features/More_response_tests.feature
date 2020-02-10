@@ -42,9 +42,17 @@ Feature: Jsonplaceholder api testing
     }
     """
 
-  @run
   Scenario: fuzzy matching value types
     Given path "albums/1"
     When method get
     Then status 200
     * match response == {"userId": '#number',"id": '#number',"title": '#string'}
+
+
+    @run
+    Scenario: fuzzy matching value types
+      Given path "albums/1"
+      When method get
+      Then status 200
+      * match response.firstname == '#notpresent'
+      * match response.title == '#present'
