@@ -56,3 +56,5 @@ Feature: Jsonplaceholder api testing
       Then status 200
       * match response.firstname == '#notpresent'
       * match response.title == '#present'
+      * match response.title == '#notnull'
+      * match response.title == '#string'
