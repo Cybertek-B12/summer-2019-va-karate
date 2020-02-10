@@ -20,9 +20,25 @@ Feature: Jsonplaceholder api testing
     * print response[0].id
     * print response[0].title
 
-   @run
+
    Scenario: verify whole response
      Given path "albums/1"
      When method get
      Then status 200
      * match response == {"userId": 1,"id": 1,"title": "quidem molestiae enim"}
+
+
+  @run
+  Scenario: verify whole response
+    Given path "albums/1"
+    When method get
+    Then status 200
+    * match response ==
+    """
+    {
+     "userId": 1,
+     "id": 1,
+     "title": "quidem molestiae enim"
+    }
+    """
+
