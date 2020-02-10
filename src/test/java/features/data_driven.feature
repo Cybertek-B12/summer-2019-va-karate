@@ -11,3 +11,4 @@ Feature: data driven tests
       | 22031 | Virginia             |
       | 20001 | District of Columbia |
       | 94043 | California           |
+      | 33109 | Florida              |
