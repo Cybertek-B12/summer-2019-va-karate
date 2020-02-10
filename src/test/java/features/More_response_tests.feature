@@ -28,7 +28,7 @@ Feature: Jsonplaceholder api testing
      * match response == {"userId": 1,"id": 1,"title": "quidem molestiae enim"}
 
 
-  @run
+
   Scenario: verify whole response
     Given path "albums/1"
     When method get
@@ -42,3 +42,9 @@ Feature: Jsonplaceholder api testing
     }
     """
 
+  @run
+  Scenario: fuzzy matching value types
+    Given path "albums/1"
+    When method get
+    Then status 200
+    * match response == {"userId": '#number',"id": '#number',"title": '#string'}
