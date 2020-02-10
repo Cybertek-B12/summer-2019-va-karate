@@ -10,7 +10,7 @@ Feature: login to bookit
 #  Header—>    Authorization:token
 #  Verify 200
 
-  @run
+
   Scenario:
     # GET TOKEN
     Given url 'https://cybertek-reservation-api-qa.herokuapp.com'
