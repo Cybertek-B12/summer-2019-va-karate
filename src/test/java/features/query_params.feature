@@ -32,4 +32,4 @@ Feature: query params test with omdb
     Then status 200
     * match response.Title == 'The Terminator'
     * match response.Year != '1991'
-#    * match response not contains {"Year": '1991'}
+    * match response !contains {"Year": '1991'}
