@@ -74,4 +74,3 @@ Feature: Jsonplaceholder api testing
        Then status 200
        * assert response.length == 100
 
-

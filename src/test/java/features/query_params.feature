@@ -1,0 +1,1 @@
+Feature: query params test with omdb
