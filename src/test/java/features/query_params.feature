@@ -17,7 +17,10 @@ Feature: query params test with omdb
     * match response contains {"Year": '1984'}
 
   @run
-
-
-
+  Scenario: all params in same line
+    Given url 'http://www.omdbapi.com/'
+    * params { apikey:'a9faab96', t:'Terminator', y:1984 }
+    When method get
+    Then status 200
+    * match response contains {"Year": '1984'}
 
