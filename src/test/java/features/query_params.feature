@@ -59,5 +59,3 @@ Feature: query params test with omdb
     When method get
     Then status 200
     And match response contains user
-
-
