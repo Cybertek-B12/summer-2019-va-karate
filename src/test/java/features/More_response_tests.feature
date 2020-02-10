@@ -59,10 +59,19 @@ Feature: Jsonplaceholder api testing
       * match response.title == '#string'
 
 
-      @run
      Scenario: verify values inside response
         Given path "albums/1"
         When method get
         Then status 200
         * match response contains {"id": 1}
         * match response contains {"title": '#string'}
+
+
+      @run
+       Scenario: verify length of a response array
+       Given path "albums"
+       When method get
+       Then status 200
+       * assert response.length == 100
+
+
